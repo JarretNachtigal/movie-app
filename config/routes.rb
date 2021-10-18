@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   get "/display_movies", controller: "movies", action: "display_all"
   get "/display_movie/:id", controller: "movies", action: "display_by_id"
   get "/display_shrek", controller: "movies", action: "display_shrek"
-
+  # hw
+  get "/display_query", controller: "actors", action: "display_query" # works with id = 5
+  get "/url_segment/:id", controller: "actors", action: "url_segment"
+  post "display_actor", controller: "actors", action: "display"
 end

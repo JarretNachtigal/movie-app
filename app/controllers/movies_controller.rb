@@ -11,4 +11,5 @@ class MoviesController < ApplicationController
     movie = Movie.where("title = 'Shrek'").readonly
     render json: movie.as_json
   end
+  
 end

@@ -1,15 +1,37 @@
 class MoviesController < ApplicationController
-  def display_all
+  def index
     response = Movie.all
     render json: response.as_json
   end
-  def display_by_id
-    movie = Movie.find(params[:id])
-    render json: movie.as_json
-  end
-  def display_shrek
-    movie = Movie.where("title = 'Shrek'").readonly
+
+  def create
+    movie = Movie.new(
+      title: params["title"],
+      plot: params["plot"],
+      year: params["year"]
+    )
+    movie.save
     render json: movie.as_json
   end
   
+  def show
+    movie = Movie.find(params[:id])
+    render json: movie.as_json
+  end
+
+  def update
+    movie = Movie.find(params[:id])
+    movie.title = params["title"] || movie.title
+    movie.plot = params["plot"] || movie.plot
+    movie.year = params["year"] || movie.year
+    movie.save
+    render json: movie.as_json
+
+  end
+
+  def destroy
+    movie = Movie.find(params[:id])
+    movie.destroy
+    render json: {message: "hakai"}
+  end
 end

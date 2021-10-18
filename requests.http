@@ -1,6 +1,49 @@
-POST http://localhost:3000/display_actor.json
+POST http://localhost:3000/movies.json
 Content-Type: application/json
 
 {
-  "id": "5"
+  "title": "test from http",
+  "plot": "test from http",
+  "year": "1234"
 }
+
+### 
+# update
+PATCH http://localhost:3000/movies/2.json
+Content-Type: application/json
+
+{
+  "plot": "kung fu. panda."
+}
+
+###
+# destroy
+
+DELETE http://localhost:3000/movies/4.json
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "first_name": "test from http",
+  "last_name": "test from http",
+  "Known_for": "1234"
+}
+
+### 
+# update
+PATCH http://localhost:3000/actors/6.json
+Content-Type: application/json
+
+{
+  "known_for": "changed with update"
+}
+
+###
+# destroy
+
+DELETE http://localhost:3000/actors/6.json
+Content-Type: application/json

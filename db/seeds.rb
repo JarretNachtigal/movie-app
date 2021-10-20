@@ -10,4 +10,4 @@
 # actor.save
 
 # Actor.create(first_name: "Owen", last_name: "Wolson", known_for: "saying wow in a funny way")
-# Movie.create(title: "Shrek 2", year: "2004", plot: "Shrek but something else happens")
+# Movie.create(title: "test_movie", year: "2000", plot: "not shrek and something else happens", director: "me", english: true)

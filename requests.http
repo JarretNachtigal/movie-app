@@ -30,12 +30,12 @@ POST http://localhost:3000/actors.json
 Content-Type: application/json
 
 {
-  "first_name": "test from http",
-  "last_name": "test from http",
-  "known_for": "1234",
-  "age": "12",
-  "gender": "male"
-
+  "first_name": "Bruce",
+  "last_name": "Willis",
+  "known_for": "RED",
+  "age": "66",
+  "gender": "male",
+  "movie_id": "1"
 }
 
 ### 
@@ -47,8 +47,8 @@ Content-Type: application/json
   "age": "22"
 }
 
-# ###
-# # destroy
+###
+# destroy
 
-# DELETE http://localhost:3000/actors/6.json
-# Content-Type: application/json
+DELETE http://localhost:3000/actors/7.json
+Content-Type: application/json

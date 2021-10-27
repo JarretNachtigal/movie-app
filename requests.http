@@ -24,18 +24,19 @@
 # DELETE http://localhost:3000/movies/4.json
 # Content-Type: application/json
 
-###
+### actors create 
 
 POST http://localhost:3000/actors.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU0NTgxODV9.qZqneM94qp-Skz9KA3up0h4X3ZzfiUkZnc4dWrLtnRk
 Content-Type: application/json
 
 {
-  "first_name": "Bruce",
-  "last_name": "Willis",
+  "first_name": "B",
+  "last_name": "W",
   "known_for": "RED",
-  "age": "66",
+  "age": "6",
   "gender": "male",
-  "movie_id": "1"
+  "movie_id": "3"
 }
 
 ### 
@@ -52,3 +53,23 @@ Content-Type: application/json
 
 DELETE http://localhost:3000/actors/7.json
 Content-Type: application/json
+
+### Users create
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "The big gamer",
+  "email": "biggamer@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "biggamer@test.com",
+  "password": "password"
+}

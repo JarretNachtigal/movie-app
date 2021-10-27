@@ -5,7 +5,6 @@ class MoviesController < ApplicationController
     response = Movie.all
     render json: response.as_json
   end
-
   def create
     movie = Movie.new(
       title: params["title"],

@@ -39,6 +39,18 @@ Content-Type: application/json
   "movie_id": "3"
 }
 
+### movies create 
+
+POST http://localhost:3000/movies.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU0NTgxODV9.qZqneM94qp-Skz9KA3up0h4X3ZzfiUkZnc4dWrLtnRk
+Content-Type: application/json
+
+{
+  "title": "test auth",
+  "plot": "test auth gamergamer",
+  "year": "1234"
+}
+
 ### 
 # update
 PATCH http://localhost:3000/actors/7.json

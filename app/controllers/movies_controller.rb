@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
 
   def index
     response = Movie.all
-    render json: response.as_json
+    render json: response
   end
   def create
     movie = Movie.new(
@@ -22,7 +22,7 @@ class MoviesController < ApplicationController
   
   def show
     movie = Movie.find(params[:id])
-    render json: movie.as_json
+    render json: movie
   end
 
   def update

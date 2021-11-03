@@ -85,3 +85,13 @@ Content-Type: application/json
   "email": "biggamer@test.com",
   "password": "password"
 }
+
+
+### MovieGenre create
+POST http://localhost:3000/movie_genres
+Content-Type: application/json
+
+{
+  "movie_id": "3",
+  "genre_id": "3"
+}

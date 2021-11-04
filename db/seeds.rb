@@ -9,5 +9,7 @@
 # actor = Actor.new({first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock"})
 # actor.save
 
-# Actor.create(first_name: "Owen", last_name: "Wolson", known_for: "saying wow in a funny way")
-# Movie.create(title: "test_movie", year: "2000", plot: "not shrek and something else happens", director: "me", english: true)
+Genre.create!(name: "comedy")
+Movie.create!(title: "test_movie", year: "2000", plot: "not shrek and something else happens", director: "me", english: true)
+Actor.create!(first_name: "Owen", last_name: "Wilson", known_for: "saying wow in a funny way", age: 100, gender: "male", movie_id: 1)
+MovieGenre.create!(genre_id: 1, movie_id: 1)
